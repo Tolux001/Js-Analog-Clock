@@ -1,0 +1,102 @@
+/* Global declaration */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root declaration */
+:root{
+    --lightBlue: #018DED;
+    --white: #fff;
+    --light: #EFEFEF;
+    --black: black;
+    --red: rgb(231, 102, 102);
+    --noAlpha: rgba(0,0,0,0.1);
+    --alpha: rgba(0,0,0,0.2);
+    --maxAlpha: rgba(0,0,0,0.5);
+}
+html {
+    background: var(--lightBlue) url(https://unsplash.it/1500/1000?image=881&blur=5);
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+  }
+
+  body {
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid var(--white);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+      0 0 0 4px var(--noAlpha),
+      inset 0 0 0 3px var(--light),
+      inset 0 0 10px var(--black),
+      0 0 10px var(--alpha);
+  } 
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
+
+  .hand {
+    width: 50%;
+    height: 6px;
+    background: var(--black);
+    position: absolute;
+    top: 50%;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    z-index: 5;
+    transition-timing-function: all cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  .second-hand {
+    background: var(--light );
+    height: 3px;
+  }
+  .hour-hand {
+    background-color: var(--red);
+  }
+  .time {
+    color: var(--white);
+    position: absolute;
+    font-size: 1.5em;
+    text-shadow: 
+      1px 1px 1px 9px var(--noAlpha),
+      inset 1px 1px 1px 3px var(--light),
+      inset 1px 1px 10px var(--black),
+      10px 5px 10px var(--maxAlpha);
+      z-index: 2;
+  }
+  .time--one {
+    width: 100%;
+  }
+ .time--two {
+    top: 45%;
+    right: 0;
+ }
+ .time--three {
+  bottom: 0;
+  width: 100%;
+ }
+ .time--four {
+  top: 45%;
+  left: 0;
+ }
