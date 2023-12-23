@@ -60,7 +60,7 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 12%;
+    padding: 14%;
   }
 
   .hand {
@@ -80,7 +80,7 @@ html {
   }
   .hour-hand {
     background-color: var(--red);
-      width: 38%;
+      width: 36%;
   }
   .time {
     color: var(--white);
