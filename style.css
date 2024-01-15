@@ -95,6 +95,7 @@ html {
   }
   .time--one {
     width: 100%;
+    top: 0;
   }
  .time--two {
     top: 45%;
